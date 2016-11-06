@@ -1,0 +1,7 @@
+---
+name: spring-boot
+templates:
+  ctl.erb: bin/ctl
+packages:
+- gs-spring-boot
+- java

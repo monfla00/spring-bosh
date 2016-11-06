@@ -1,0 +1,34 @@
+#!/bin/bash
+
+RUN_DIR=/var/vcap/sys/run/spring-boot
+LOG_DIR=/var/vcap/sys/log/spring-boot
+PIDFILE=${RUN_DIR}/pid
+
+case $1 in
+
+  start)
+    mkdir -p $RUN_DIR $LOG_DIR
+    chown -R vcap:vcap $RUN_DIR $LOG_DIR
+
+    echo $$ > $PIDFILE
+
+    cd /var/vcap/packages/gs-spring-boot
+
+    export PATH=/var/vcap/packages/java/bin:$PATH
+
+    exec java -jar ./target/gs-spring-boot-0.1.0.jar \
+      >>  $LOG_DIR/spring-boot.stdout.log \
+      2>> $LOG_DIR/spring-boot.stderr.log
+
+    ;;
+
+  stop)
+    kill -9 `cat $PIDFILE`
+    rm -f $PIDFILE
+
+    ;;
+
+  *)
+    echo "Usage: ctl {start|stop}" ;;
+
+esac

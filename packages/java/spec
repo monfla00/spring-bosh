@@ -1,0 +1,7 @@
+---
+name: java
+
+dependencies:
+
+files:
+- java/jre-8u111-linux-x64.tar.gz

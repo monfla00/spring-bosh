@@ -1,0 +1,9 @@
+# abort script on any command that exits with a non zero value
+set -e -x
+
+tar zxvf java/jre-8u111-linux-x64.tar.gz
+cp -a jre1.8.0_111/* ${BOSH_INSTALL_TARGET}
+
+#sudo DEBIAN_FRONTEND=noninteractive add-apt-repository -y ppa:openjdk-r/ppa
+#sudo DEBIAN_FRONTEND=noninteractive apt-get -y update
+#sudo DEBIAN_FRONTEND=noninteractive apt-get -y install openjdk-8-jdk

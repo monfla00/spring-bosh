@@ -1,0 +1,5 @@
+check process spring-boot
+  with pidfile /var/vcap/sys/run/spring-boot/pid
+  start program "/var/vcap/jobs/spring-boot/bin/ctl start"
+  stop program "/var/vcap/jobs/spring-boot/bin/ctl stop"
+  group vcap

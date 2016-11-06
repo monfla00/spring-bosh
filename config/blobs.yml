@@ -1,0 +1,9 @@
+---
+gs-spring-boot/target/gs-spring-boot-0.1.0.jar:
+  object_id: 147085dd-6b81-4720-bd51-1652e999d877
+  sha: 4b5e8e4ec9bf0a2da86d69bfc4192dabd54fa4d2
+  size: 14656615
+java/jre-8u111-linux-x64.tar.gz:
+  object_id: 18108fc6-9f88-4889-a2ac-b21270f449da
+  sha: d09fa2b77b6cf05ba835377a00ef495e6deebe1b
+  size: 71897052
