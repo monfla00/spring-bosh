@@ -35,7 +35,7 @@ bosh -n deploy
 
 And that's it.
 
-There should be now 2 vms running:
+Now 2 vms should be running:
 ```
 +------------------------------------------------------+---------+-----+---------+-------------+
 | VM                                                   | State   | AZ  | VM Type | IPs         |
